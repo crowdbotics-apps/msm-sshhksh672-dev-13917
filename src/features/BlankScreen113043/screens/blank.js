@@ -34,8 +34,8 @@ export default class Blank extends React.Component {
         onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
       />
       <Button
-        title="Press me!"
-        color="#ff6633"
+        title="Press Here..!!"
+        color="#33ff41"
         onPress={() => alert("Pressed!")}
       />
     </View>
@@ -48,6 +48,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 16
   },
 
+  View_1: {},
+  Text_3: {},
+  TextInput_5: {},
+  Button_7: {},
   View_1: {},
   Text_3: {},
   TextInput_5: {},
