@@ -1,8 +1,17 @@
 import axios from "axios"
+import { WSWS_USERNAME, WSWS_PASSWORD } from "react-native-dotenv"
+const wSWS = axios.create({
+  baseURL: "https://www.ds.com/api",
+  auth: { username: WSWS_USERNAME, password: WSWS_PASSWORD },
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const mSMsshhkshAPI = axios.create({
   baseURL: "https://msm-sshhksh672-dev-13917-prod.herokuapp.com/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
+function wsws_get_users_read(action) {
+  return wSWS.get(`/users`)
+}
 function api_v1_customtext_list(action) {
   return mSMsshhkshAPI.get(`/api/v1/customtext/`)
 }
@@ -107,6 +116,7 @@ function rest_auth_user_partial_update(action) {
   return mSMsshhkshAPI.patch(`/rest-auth/user/`, null, { data: action.data })
 }
 export const apiService = {
+  wsws_get_users_read,
   api_v1_customtext_list,
   api_v1_customtext_read,
   api_v1_customtext_update,
