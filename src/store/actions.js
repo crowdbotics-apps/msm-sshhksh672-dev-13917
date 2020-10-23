@@ -438,17 +438,34 @@ export const rest_auth_user_partial_updateFailed = (error, starter) => ({
   error,
   starter
 })
+
 export const wsws_get_users_read = new_param => ({
   type: types.WSWS_GET_USERS_READ,
   new_param
 })
+
 export const wsws_get_users_readSucceeded = (response, starter) => ({
   type: types.WSWS_GET_USERS_READ_SUCCEEDED,
   response,
   starter
 })
+
 export const wsws_get_users_readFailed = (error, starter) => ({
   type: types.WSWS_GET_USERS_READ_FAILED,
+  error,
+  starter
+})
+export const wsws1_get_users_read = new_param => ({
+  type: types.WSWS1_GET_USERS_READ,
+  new_param
+})
+export const wsws1_get_users_readSucceeded = (response, starter) => ({
+  type: types.WSWS1_GET_USERS_READ_SUCCEEDED,
+  response,
+  starter
+})
+export const wsws1_get_users_readFailed = (error, starter) => ({
+  type: types.WSWS1_GET_USERS_READ_FAILED,
   error,
   starter
 })

@@ -4,6 +4,12 @@ const initialState = { wSWS: [], mSMsshhkshAPI: [] }
 
 export default function apiReducer(state = initialState, action) {
   switch (action.type) {
+    case types.WSWS1_GET_USERS_READ:
+    case types.WSWS1_GET_USERS_READ_SUCCEEDED:
+    case types.WSWS1_GET_USERS_READ_FAILED:
+      return Object.assign({}, state, {
+        wSWS: [...state.wSWS, action.response]
+      })
     case types.WSWS_GET_USERS_READ:
     case types.WSWS_GET_USERS_READ_SUCCEEDED:
     case types.WSWS_GET_USERS_READ_FAILED:
