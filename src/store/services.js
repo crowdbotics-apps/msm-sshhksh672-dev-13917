@@ -1,6 +1,6 @@
 import axios from "axios"
 const mSMsshhkshAPI = axios.create({
-  baseURL: "https://msm-sshhksh672-dev-13917.botics.co/",
+  baseURL: "https://msm-sshhksh672-dev-13917-prod.herokuapp.com/",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_v1_customtext_list(action) {
